@@ -16,7 +16,11 @@ func SetDate(r *Result) {
 }
 
 func ToJson(r *Result) {
-	json.Marshal(r)
+	json, err := json.Marshal(r)
+	if(err != nil) {
+		fmt.Println(err)
+	}
+	println(string(json))
 }
 
 func JsonDemo() {
