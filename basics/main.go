@@ -1,12 +1,12 @@
 package main
 
-import "simple-demo/basics/demo"
-
-type Result struct {
-	Code    int    `json:"code"`
-	Message string `json:"msgs"`
-}
+import (
+	"fmt"
+	"time"
+)
 
 func main() {
-	demo.JsonDemo()
+
+	time := time.Now().AddDate(0,0,1).Format("20060102")
+    fmt.Println(time)
 }
